@@ -1,0 +1,27 @@
+{
+  "name": "semana-omnistack-11-be-the-hero",
+  "version": "1.0.0",
+  "description": "A multi-platform application to allow several people to donate money to any NGO's cadastred.This project was provided by Rocketseat.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduardoPazz/semana-omnistack-11-be-the-hero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduardoPazz/semana-omnistack-11-be-the-hero/issues"
+  },
+  "homepage": "https://github.com/EduardoPazz/semana-omnistack-11-be-the-hero#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
