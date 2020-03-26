@@ -1,24 +1,29 @@
 const express = require('express');
 const routes = express.Router();
 
-const connection = require('./database/connection.js');
+// importing controllers
+const IncidentController = require('./controllers/IncidentController.js');
+const ONGController = require('./controllers/ONGController.js');
+const ProfileController = require('./controllers/ProfileController.js');
+const SessionController = require('./controllers/SessionController.js');
 
-routes.get('/ongs', async (req, res) => {
-    const data = await connection('ongs').select('*');
+// Sessions routes
+routes.post('/sessions', SessionController.create);
 
-    return res.json(data);
-});
+// Incidents routes
+routes.get('/incidents', IncidentController.index);
 
-routes.post('/ongs', async (req, res) => {
-     const { name, email, whatsapp, city, uf } = req.body;
-     const id = require('crypto').randomBytes(4).toString('HEX'); // create a random id
+routes.post('/incidents', IncidentController.create);
 
-    
-    await connection('ongs').insert({
-        id, name, email, whatsapp, city, uf
-    });
+routes.delete('/incidents/:id', IncidentController.delete);
 
-     return res.json({ id });
-});
+// Profile routes
+routes.get('/profile', ProfileController.index);
 
+//ONGs routes
+routes.get('/ongs', ONGController.index);
+
+routes.post('/ongs', ONGController.create);
+
+// Exporting routes
 module.exports = routes;
