@@ -15,6 +15,7 @@ html {
 
 body {
     font: 400 14px Roboto, sans-serif;
+    color: #41414D;
     background-color: #f0f0f5;
     -webkit-font-smoothing: antialiased;
 }
@@ -56,4 +57,23 @@ form input {
 
 .button:hover {
     filter: brightness(90%);
+}
+
+a.back-link {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #41414d;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 200ms;
+}
+
+a.back-link svg {
+    margin-right: 16px;
+}
+
+a.back-link:hover {
+    opacity: 0.8;
 }
