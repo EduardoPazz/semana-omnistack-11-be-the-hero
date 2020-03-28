@@ -70,7 +70,7 @@ function Profile() {
                 <li>
                 
                     <button type="button">
-                    <FiDelete />        
+                        <FiDelete />        
                     </button>
                     <strong>Caso</strong>
                     <p>Título do Caso</p>
