@@ -33,13 +33,11 @@ function Register() {
 
         try {
             const { data: { id } } = await api.post('/ongs', data) /* Este método realiza a request pro servidor. O primeiro parâmetro é a rota. Como em api.js, já há uma baseURL, aqui basta informar o recurso necessário, conforme fora estruturado no back-end. Como é uma request, ele retornará uma response, e essa response nós podemos inserir em uma variável. */
-
             console.log(id);
-
             alert(`Seu ID de acesso: ${id}. Anote para não perder.`);      
-            
             history.push('/'); /* Este submétodo envia o usuário para a rota passada como o parâmetro de push */
         } catch (error) {
+            console.error(error);
             alert(`Ocorreu algum erro no servidor, tente novamente em 8 horas.`);
         }
 
