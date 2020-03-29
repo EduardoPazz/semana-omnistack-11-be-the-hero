@@ -20,15 +20,15 @@ function Logon() {
 
     async function handleLogon(event) {
         event.preventDefault();
-
+        
         try {
             const { data: { name } } = await api.post('/sessions', { id });
 
-            localStorage.setItem('ong_id', id) /* Neste caso em que temos os dados de login de um usuário, é usual armazenar essas informações em localStorage */
+            localStorage.setItem('ong_id', id)
             localStorage.setItem('ong_name', name)
+
             history.push('/profile');
         } catch (error) {
-            console.error(error);
             alert(`Usuário ${id} não encontrado.`);
         }
     }
@@ -46,8 +46,8 @@ function Logon() {
                     />
                     <button type="submit" className="button">Entrar</button>
 
-                    <Link className="back-link" to="/register"> {/* O componente Link é um substituto ao <a>, pois não necessita que a haja uma nova request do servidor (pagina recarregue) para que troque a rota, agilizando a vida do usuário. Em vez de "href", a propriedade é "to". Nos estilos, o seletor continua sendo "a" */}
-                        <FiLogIn size="30" color="#E02041" /> {/* Uso do ícone. Ele aceita as propriedades "size" e "color" */}
+                    <Link className="back-link" to="/register"> 
+                        <FiLogIn size="30" color="#E02041" />
                         Não possuo registro
                     </Link>
                 </form>
