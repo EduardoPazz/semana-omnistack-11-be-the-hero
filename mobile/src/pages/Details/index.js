@@ -4,10 +4,8 @@ import { View } from "react-native";
 
 import './styles'
 
-function Details() {
+export default function Details() {
     return(
         <View />
     );
-}
-
-export default Incidents;
+};
