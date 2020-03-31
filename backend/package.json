@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/EduardoPazz/semana-omnistack-11-be-the-hero#readme",
   "dependencies": {
+    "celebrate": "^12.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.20.13",
