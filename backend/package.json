@@ -4,8 +4,8 @@
   "description": "A multi-platform application to allow several people to donate money to any NGO's cadastred.This project was provided by Rocketseat.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "test": "jest"
+    "start": "nodemon src/server.js",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,12 @@
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
-    "jest": "^25.2.4",
     "knex": "^0.20.13",
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "jest": "^25.2.4",
+    "supertest": "^4.0.2"
   }
 }
