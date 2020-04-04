@@ -16,7 +16,7 @@ const SessionValidators = require('./validators/SessionValidators');
 // routes
 
 // Incidents routes
-routes.get('/incidents', IncidentsValidators.index, IncidentController.index); /* As rotas, em Express, funcionam de forma contínua. Logo, em cada comando, pode haver múltiplos parâmetros. No caso de uma validação, é importante informar o método de validação ANTES do controller, obviamente. Por lógica, infinitos parâmetros de validação poderiam ser passados antes do controller. Esse conceito é chamado de middlewares */
+routes.get('/incidents', IncidentsValidators.index, IncidentController.index);
 
 routes.post('/incidents', IncidentsValidators.create, IncidentController.create);
 

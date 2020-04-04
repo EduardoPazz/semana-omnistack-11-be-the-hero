@@ -9,4 +9,3 @@ describe('Generate Unique ID', /* A principal função do teste se chama describ
 })
 
 /* terminado a configuração do teste, basta executar o script npm test */
-
