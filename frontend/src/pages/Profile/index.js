@@ -38,12 +38,12 @@ function Profile() {
         localStorage.clear();
         history.push('/');
     }
-
+    
     return(
         <div className="profile-container" >
             <header>
                 <img src={logoImg} alt="Be the Hero"/>
-                <span>Bem vindx, {name} </span>
+                <span>Bem vind@, {name} </span>
                 <Link className="button" to="/incidents/new" >Cadastrar novo caso</Link>
                 <button type="button" onClick={handleLogout}>
                     <FiPower size="22" color="red" />

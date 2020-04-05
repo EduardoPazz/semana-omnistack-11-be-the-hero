@@ -9,8 +9,8 @@ module.exports = {
 
         const data = await connection('incidents')
             .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
-            .limit(5)
-            .offset( (page - 1) * 5 )
+            .limit(6)
+            .offset( (page - 1) * 6 )
             .select([
                 'incidents.*',
                 'ongs.name',
@@ -22,7 +22,9 @@ module.exports = {
 
         res.header('X-Total-Count', count['count(*)']);
 
-        return res.json(data);
+        const num = count['count(*)'];
+
+        return res.json({data, num});
     }, 
 
     async create(req, res) {

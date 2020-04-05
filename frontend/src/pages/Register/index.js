@@ -16,7 +16,7 @@ function Register() {
 
     const [name, setName] = useState(''); /* definindo variáveis que serão completas pelos inputs */
     const [email, setEmail] = useState('');
-    const [whatsapp, setWhatsApp] = useState(0);
+    const [whatsapp, setWhatsApp] = useState(Number);
     const [city, setCity] = useState('');
     const [uf, setUf] = useState('');
 
@@ -36,7 +36,7 @@ function Register() {
             
             alert(`Seu ID de acesso: ${id}. Anote para não perder.`);      
 
-            history.push('/');
+            history.push('/logon');
         } catch (error) {
             alert(`Ocorreu algum erro no servidor, tente novamente em 8 horas.`);
         }
@@ -50,8 +50,8 @@ function Register() {
                 <section>
                     <img src={logoImg} alt="Be the Hero"/>
                     <h1>Cadastro</h1>
-                    <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG</p>
-                    <Link className="back-link" to="/">
+                    <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+                    <Link className="back-link" to="/logon">
                         <FiArrowLeft size="30" color="#E02041" />
                         Retornar ao Login
                     </Link>
@@ -69,7 +69,7 @@ function Register() {
                         onChange={event => setEmail(event.target.value)}
                     />
                     <input 
-                        type="number" 
+                        type="number"
                         placeholder="WhatsApp" 
                         value={whatsapp}
                         onChange={event => setWhatsApp(event.target.value)}

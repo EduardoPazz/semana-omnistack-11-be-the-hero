@@ -6,11 +6,9 @@ import api from "../../services/api";
 
 import './styles.css';
 
-import { FiLogIn } from "react-icons/fi";
+import { FiLogIn, FiArrowLeft } from "react-icons/fi";
 
 import logo from "../../assets/logo.svg";
-
-import heroesImg from '../../assets/heroes.png';
 
 function Logon() {
 
@@ -35,8 +33,8 @@ function Logon() {
 
     return(
         <div className="logon-container">
-            <section className="form">
-                <img src={logo} alt="Be the Hero"/>
+            <section>
+                <img src={logo} alt="Be the Hero" width="350"/>
                 <form onSubmit={handleLogon} >
                     <h1>Faça seu Logon</h1>
                     <input 
@@ -46,13 +44,18 @@ function Logon() {
                     />
                     <button type="submit" className="button">Entrar</button>
 
-                    <Link className="back-link" to="/register"> 
-                        <FiLogIn size="30" color="#E02041" />
-                        Não possuo registro
-                    </Link>
+                    <div className="back-links">
+                        <Link className="back-link" to="/register"> 
+                            <FiLogIn size="30" color="#E02041" />
+                            Não possuo registro
+                        </Link>
+                        <Link className="back-link donner" to="/"> 
+                            <FiArrowLeft size="30" color="#E02041" />
+                            Sou doador
+                        </Link>
+                    </div>
                 </form>
             </section>
-            <img src={heroesImg} alt="Heroes"/>
         </div>
     );
 }

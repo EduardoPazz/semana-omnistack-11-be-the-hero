@@ -24,7 +24,8 @@ function NewIncident() {
         event.preventDefault();
 
         try {
-            await api.post('/incidents', { title, description, value}, { headers: { authentication: id }}); /* quando é necessário enviar body e headers em uma requisição, o headers fica como tercerio parâmetro */
+            await api.post('/incidents', { title, description, value}, { headers: { authentication: id }});
+            
             history.push('/profile');
         } catch (error) {
             alert('Erro no cadastro, tente novamente')
@@ -37,7 +38,8 @@ function NewIncident() {
                 <section>
                     <img src={logoImg} alt=""/>
                     <h1>Cadastrar novo caso</h1>
-                    <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
+                    <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p> <br/>
+                    <p>É responsabilide sua, como ONG, manter apenas os casos que ainda necessitem de doação em sua conta para não confundir os doadores.</p>
                     <Link to="/profile" className="back-link" > <FiArrowLeft size="30" color="#e0204e" /> Voltar para o perfil</Link>
                 </section>
                 <form onSubmit={handleNewIncident}>
