@@ -52,8 +52,9 @@ Dentro de alguns segundos, o seu navegador principal abrirá com a página inici
 - React-Scripts
 
 ## :wrench: Contribuindo
+Abaixo eu selecionei uma lista de issues que acabei notando enquanto desenvolvia. Sinta-se a vontade para analisá-la. Boa parte delas existem ou porque eu ainda não sei corrigí-las plenamente ou porque não possui tempo suficiente para isso.
 
-Para tal, basta "forkear" o projeto para a tua conta, criar uma branch para a nova feature, "commitar" as suas mudanças, "pushar" para o GitHub e abrir uma PR (Pull Request).
+Para contribuir, portanto, basta "forkear" o projeto para a tua conta, criar uma branch para a nova feature, "commitar" as suas mudanças, "pushar" para o GitHub e abrir uma PR (Pull Request).
 
 ## :point_right: Licença
 
