@@ -75,7 +75,7 @@ Eis algumas issues que já tenho consciência que devem ser resolvidas.
 :bulb: *Pelo que tentei aplicar com o react-number-format, depender do placeholder para sinalizar o usuário o que informar no campo não será possível*
 
 - Fornecer uma forma melhor do doador entrar em contato com a ONG, e desenvolver alguma forma automatizada de perguntar periodicamente se seus casos já foram resolvidos e, se sim, permitir que ela apague esses casos apenas marcando-os para tal, deixando a cargo do sistema fazer a "limpa";
-- Melhorar a UX no que tange ao usuário:
+- Melhorar algumas funcionalides no que tange ao usuário:
     - Se ele for uma ONG que já fizera logon anteriormente e acessar a rota `/logon` novamente, automaticamente redirecioná-lo à `/profile`, sem necessidade de um novo logon;
     - Bloquear o usuário que tente acessar as rotas `/profile` ou `/incidents/new` sem estar logado antes (usando localStorage ou sessionStorage, creio eu);
     - Permitir que ele altere suas informações ou informações dos casos cadastrados.
